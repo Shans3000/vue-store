@@ -8,7 +8,7 @@
     "start": "nodemon src/index.ts",
     "dev": "ts-node src/index.ts",
     "build": "tsc",
-    "serve": "set DATABASE_URL=file:./dev.db && node dist/index.js"
+    "serve": "cross-env DATABASE_URL=file:./dev.db node dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^20.19.22",
+    "cross-env": "^10.1.0",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
