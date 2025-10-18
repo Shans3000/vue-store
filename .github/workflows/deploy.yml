@@ -27,7 +27,7 @@ jobs:
         uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.gO0eFQRBwyMGMZoLgoQ6At4l }}
-          vercel-org-id: ${{ secrets.aleksandrs-projects-7975e620 }}
+          vercel-org-id: ${{ secrets.Fre9tvwI3AkwTNUmBHnHCgwA }}
           vercel-project-id: ${{ secrets.prj_oA6K7RvDdmATdatiVmWSGGPnR2MJ }}
           working-directory: ./frontend
           vercel-args: '--prod'
@@ -42,5 +42,5 @@ jobs:
       - name: Trigger Render Deploy
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
-          service-id: ${{ secrets.srv-d3p9um56ubrc73f0lclg }}
+          service-id: ${{ secrets.Fre9tvwI3AkwTNUmBHnHCgwA }}
           api-key: ${{ secrets.rnd_qO3wxy }}
