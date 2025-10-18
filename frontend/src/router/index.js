@@ -33,13 +33,13 @@ const routes = [
     component: () => import('@/views/CheckoutView.vue')
   },
   {
-    path: '/order-success',
-    name: 'OrderSuccess',
-    component: () => import('@/views/OrderSuccessView.vue')
+  path: '/order-success',
+  name: 'OrderSuccess',
+  component: () => import('@/views/OrderSuccessVIew.vue'),
   },
   {
     path: '/:pathMatch(.*)*',
-    component: () => import('@/views/NotFoundView.vue')
+    component: () => import('@/views/NotFoundView.vue'),
   }
 ]
 
