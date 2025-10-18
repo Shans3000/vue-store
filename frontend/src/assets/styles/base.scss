@@ -1,0 +1,25 @@
+@use 'vars' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  color: $text-dark;
+  background-color: white;
+  line-height: 1.5;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $gap-md;
+}

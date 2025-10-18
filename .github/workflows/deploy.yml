@@ -1,0 +1,46 @@
+name: Deploy Vue + Node app
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-frontend:
+    name: Deploy Frontend to Vercel
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install and Build Frontend
+        working-directory: ./frontend
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.gO0eFQRBwyMGMZoLgoQ6At4l }}
+          vercel-org-id: ${{ secrets.aleksandrs-projects-7975e620 }}
+          vercel-project-id: ${{ secrets.prj_oA6K7RvDdmATdatiVmWSGGPnR2MJ }}
+          working-directory: ./frontend
+          vercel-args: '--prod'
+
+  deploy-backend:
+    name: Deploy Backend to Render
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Trigger Render Deploy
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.srv-d3p9um56ubrc73f0lclg }}
+          api-key: ${{ secrets.rnd_qO3wxy }}
