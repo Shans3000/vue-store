@@ -16,5 +16,6 @@ app.get("/", (req: Request, res: Response) => {
   res.send("✅ Backend работает!");
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Сервер запущен: http://localhost:${PORT}`));
+const PORT = process.env.PORT || 10000;
+app.listen(PORT, () => console.log(`🚀 Сервер запущен на порту ${PORT}`));
+
